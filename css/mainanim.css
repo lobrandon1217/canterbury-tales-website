@@ -22,9 +22,9 @@
 
 /* for the background on the cover section on index */
 #indexContainerTop {
-    background: url("../img/cathedral.jpg");
+    /*background: url("../img/cathedral.jpg");
     background-position: center;
-    background-size: cover;
+    background-size: cover;*/
 }
 
 /* for navbar color change on scroll */
@@ -38,4 +38,31 @@
 
 .scrolled {
     background: rgba(2,2,3,0.75);
+}
+
+/* For the arrow pointing down */
+
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {
+    	transform: translateY(0);
+  	}
+	40% {
+    	transform: translateY(-15px);
+  	}
+	60% {
+    	transform: translateY(-5px);
+  	}
+}
+
+#introTopBoxDownArrow {
+	position: absolute;
+	bottom: 5vh;
+	transform: translateX(50%);
+	height: 50px;
+	width: 50px;
+	animation: bounce 2s infinite;
+	background-size: contain;
+}
+#introTopBoxDownArrow:hover{
+	cursor: pointer;
 }

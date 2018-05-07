@@ -1,8 +1,17 @@
 @font-face {
-    font-family: Avenir;
-    src: url("../font/avenir.otf");
+    font-family: Raleway-Thin;
+    src: url("../font/Raleway-Thin.ttf");
+}
+
+@@font-face {
+    font-family: Raleway-Regular;
+    src: url("../font/Raleway-Regular.ttf");
+}
+
+.raleway-thin {
+    font-family: Raleway-Thin, sans-serif;
 }
 
 body {
-    font-family: Avenir;
+    font-family: Raleway-Regular, sans-serif;
 }
