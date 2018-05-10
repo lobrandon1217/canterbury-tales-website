@@ -2,13 +2,14 @@
 <html>
     <head>
         <title>Canterbury Tales Interactive</title>
-        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
         <link rel="stylesheet" href="css/font.css">
         <link rel="stylesheet" href="css/mainanim.css">
+        <link rel="stylesheet" href="css/components.css">
 
         <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
         <script type="text/javascript" src="js/popper.min.js"></script>
-        <script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/bootstrap.js"></script>
         <script type="text/javascript" src="js/parallax.min.js"></script>
     </head>
 
@@ -21,7 +22,7 @@
                     <nav class="navbar navbar-dark" style="">
                         <a href="#" class="navbar-brand" style="">
                             <img src="img/horse.svg" width="45px" id="navbarLogo">
-                            <b id="navbarTitle">Canterbury</b>
+                            <b id="navbarTitle" class="raleway-thin">Canterbury</b>
                         </a>
                     </nav>
                 </div>
@@ -42,33 +43,54 @@
             </div>
 
             <!-- MIDDLE CONTENT -->
-            <div class="d-flex flex-row justify-content-center" style="height: 100%;">
+            <div id="mainCover" class="d-flex flex-row justify-content-center" style="height: 100%;">
                 <div class="d-flex align-items-center">
-                    <div>
-                        <h3 class="display-3 text-light raleway-thin" style="text-shadow: 0px 3px 5px black; letter-spacing: 5px;">WELCOME</h3>
+                    <div style="color: white;">
+                        <h3 class="display-3 text-light raleway-thin ts-display" style="letter-spacing: 10px;">CANTERBURY</h3>
+                        <h3 id="changingSubtitle" class="raleway-thin ts-display" style="text-align: center;">THE HOME OF THE CANTERBURY TALES</h3>
                     </div>
                 </div>
                 <div id="introTopBoxDownArrow">
-    				<svg-icon>
-    					<svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="si-glyph si-glyph-arrow-thick-thin-down">
-    					    <defs></defs>
-    					    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-    					        <g transform="translate(1.000000, 4.000000)" fill="#FFFFFF">
-    					            <path d="M1.336,4.667 C1.535,4.667 1.74,4.712 1.932,4.808 L8.002,7.842 L14.071,4.808 C14.73,4.478 15.53,4.746 15.859,5.405 C16.189,6.063 15.921,6.864 15.263,7.193 L8.597,10.526 C8.222,10.714 7.779,10.714 7.404,10.526 L0.738,7.193 C0.08,6.864 -0.188,6.063 0.142,5.405 C0.377,4.937 0.847,4.667 1.336,4.667 L1.336,4.667 Z" class="si-glyph-fill"></path>
-    					            <path d="M1.336,0.334 C1.436,0.334 1.537,0.356 1.633,0.404 L8.002,3.588 L14.369,0.404 C14.698,0.24 15.098,0.373 15.264,0.702 C15.428,1.031 15.295,1.431 14.965,1.597 L8.299,4.93 C8.111,5.024 7.891,5.024 7.703,4.93 L1.037,1.597 C0.707,1.432 0.574,1.032 0.738,0.702 C0.855,0.469 1.091,0.334 1.336,0.334 L1.336,0.334 Z" class="si-glyph-fill"></path>
-    					        </g>
-    					    </g>
-    					</svg>
-    				</svg>
+    				<a href="#afterBeginning">
+                        <svg-icon>
+        					<svg viewBox="0 0 17 17" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="si-glyph si-glyph-arrow-thick-thin-down">
+        					    <defs></defs>
+        					    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        					        <g transform="translate(1.000000, 4.000000)" fill="#FFFFFF">
+        					            <path d="M1.336,4.667 C1.535,4.667 1.74,4.712 1.932,4.808 L8.002,7.842 L14.071,4.808 C14.73,4.478 15.53,4.746 15.859,5.405 C16.189,6.063 15.921,6.864 15.263,7.193 L8.597,10.526 C8.222,10.714 7.779,10.714 7.404,10.526 L0.738,7.193 C0.08,6.864 -0.188,6.063 0.142,5.405 C0.377,4.937 0.847,4.667 1.336,4.667 L1.336,4.667 Z" class="si-glyph-fill"></path>
+        					            <path d="M1.336,0.334 C1.436,0.334 1.537,0.356 1.633,0.404 L8.002,3.588 L14.369,0.404 C14.698,0.24 15.098,0.373 15.264,0.702 C15.428,1.031 15.295,1.431 14.965,1.597 L8.299,4.93 C8.111,5.024 7.891,5.024 7.703,4.93 L1.037,1.597 C0.707,1.432 0.574,1.032 0.738,0.702 C0.855,0.469 1.091,0.334 1.336,0.334 L1.336,0.334 Z" class="si-glyph-fill"></path>
+        					        </g>
+        					    </g>
+        					</svg>
+        				</svg>
+                    </a>
     			</div>
             </div>
         </div>
 
-        <!-- After the beginning -->
-        <div class="container">
-            <div class="row">
+        <!-- Actual content -->
+        <div id="afterBeginning" class="container-flex bg-light" style="padding-top: 50px;">
+            <div class="row justify-content-center" >
                 <div class="col-6">
-                    testing
+                    <h1 class="raleway-thin" style="text-align: center;">Why Canterbury, England?</h1>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-2">
+                    <hr class="fancySeparator">
+                </div>
+            </div>
+            <div class="row justify-content-center mt-25">
+                <div class="col-5">
+                    <p>Canterbury is the home of the Canterbury Cathedral, one of the oldest and most famous Christian structures in England. It is also the location of the death of Saint Thomas Becket, the Archbishop of Canterbury who was murdered in 1170, giving the location some history to look for.</p>
+                    <p class="mt-25">You could also visit one of these other locations as a part of your vacation, but that's not all of them. For more information, ask a tour guide.</p>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">St. Augustine's Abbey <small class="text-muted">- ruins of a 6th-century church</small></li>
+                        <li class="list-group-item">Canterbury Roman Museum <small class="text-muted">- museum of Roman history, mosaics, and artifacts</small></li>
+                        <li class="list-group-item">Beaney's House of Art and Knowledge <small class="text-muted">- museum, art gallery, and library</small></li>
+                        <li class="list-group-item">Westgate <small class="text-muted">- historic gatehouse with a pub and nice views</small></li>
+                        <li class="list-group-item">Canterbury Castle <small class="text-muted">- William the Conqueror's ruined 1070 castle</small></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -78,12 +100,29 @@
             function that i got off of stack overflow for nav bar scroll reacting
             **/
             $(function () {
+                //scroll function
                 $(document).scroll(function () {
                     var $nav = $("#indexRowNavbar");
-                    $nav.toggleClass('scrolled', $(this).scrollTop() > ($nav.height()));
+                    $nav.toggleClass('scrolled', $(this).scrollTop() > ($("#mainCover").height() / 3));
                 });
 
+                 //function for parallax in the main image
                 $('.parallax-window').parallax({imageSrc: 'img/cathedral.jpg'});
+
+                //change text repeatedly
+                setInterval(function(){
+                    let subtitleObj = $("#changingSubtitle");
+                    let subtitleTexts = ["THE HOME OF THE CANTERBURY TALES", "YOUR NEXT VACATION SPOT", "THE BEST OF EUROPE", "THE BEST OF BRITAIN"];
+                    let curSubtitle = subtitleObj.text();
+                    let newSubtitle = subtitleTexts[Math.floor(Math.random() * subtitleTexts.length)];
+                    while( newSubtitle === curSubtitle ) {
+                        newSubtitle = subtitleTexts[Math.floor(Math.random() * subtitleTexts.length)];
+                    }
+                    subtitleObj.fadeOut(400, function(){
+                        subtitleObj.text(newSubtitle);
+                        subtitleObj.fadeIn();
+                    });
+                }, 5000);
             });
         </script>
     </body>

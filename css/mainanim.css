@@ -1,6 +1,7 @@
 /* for the Canterbury Tales title, set transition and other things to prepare for animation */
 #navbarTitle {
-    transition: 0.25s;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-in-out;
     opacity: 0;
     position: relative;
     left: -45px;
@@ -11,7 +12,7 @@
 #navbarLogo {
     position: relative;
     z-index: 2;
-    transition: 0.15s;
+    transition: 0.3s;
 }
 
 /* animation that moves the navbar to the correct position */
@@ -19,12 +20,8 @@
     left: 0px;
     opacity: 1;
 }
-
-/* for the background on the cover section on index */
-#indexContainerTop {
-    /*background: url("../img/cathedral.jpg");
-    background-position: center;
-    background-size: cover;*/
+#navbarLogo:hover {
+    transform: rotate(10deg);
 }
 
 /* for navbar color change on scroll */
