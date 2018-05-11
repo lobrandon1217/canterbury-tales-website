@@ -26,6 +26,7 @@
 
 /* for navbar color change on scroll */
 #indexRowNavbar {
+    z-index: 9999;
     position: fixed;
     transition: 0.5s;
     top: 0;
