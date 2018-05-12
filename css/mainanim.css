@@ -34,8 +34,20 @@
     right: 0;
 }
 
+#indexRowNavbar a {
+    transition: 0.25s;
+}
+
 .scrolled {
     background: rgba(2,2,3,0.75);
+}
+
+.scrolled a {
+    color: white !important;
+}
+
+.scrolled svg {
+    fill: white;
 }
 
 /* For the arrow pointing down */
