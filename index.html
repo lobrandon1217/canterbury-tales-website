@@ -11,27 +11,17 @@
         <script type="text/javascript" src="js/popper.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.js"></script>
         <script type="text/javascript" src="js/parallax.min.js"></script>
-        <style>
-            /* new navbar colors */
-
-            #indexRowNavbar a{
-                color: black;
-            }
-        </style>
     </head>
 
     <body style="">
-        <!-- VIDEO -->
-        <video id="bgVideo" src="img/Graveyard_Background.mov" loop style="position: absolute; z-index: -1; min-width: 100vw;" oncanplay="$(this)[0].play()"></video>
-        
         <!-- Container for everything on the initial landing page -->
-        <div id="indexContainerTop" class="container-flex" style="height: 100vh;">
+        <div id="indexContainerTop" class="container-flex parallax-window" data-parallax="scroll" data-image-src="img/cathedral.jpg" style="height: 100vh;">
             <!-- NAVBAR -->
-            <div id="indexRowNavbar" class="row justify-content-center" style="color: black;">
+            <div id="indexRowNavbar" class="row justify-content-center">
                 <div class="col-2">
-                    <nav class="navbar" style="">
+                    <nav class="navbar navbar-dark" style="">
                         <a href="#" class="navbar-brand" style="">
-                            <svg id="navbarLogo" width="45px" style="vertical-align: middle" enable-background="new 0 0 91.229 91.229" fill="black" version="1.1" viewBox="0 0 91.229 91.229" xml:space="preserve" xmlns="http://www.w3.org/2000/svg"><path d="m81.205 30.824s0.502-0.335-1.674-2.843c-2.174-2.509-5.436-4.767-4.6-6.774 0 0 1.172-6.021 2.174-7.777 1.004-1.756-2.76 3.429-4.098 4.098 0 0-0.335-2.76 0.585-4.85 0.921-2.09-1.087-0.251-3.512 3.178s-2.843-4.098-12.544-3.094c0 0 4.349 0.251 5.352 1.589 1.004 1.338 1.172 4.516-12.628-1.923-13.799-6.439-19.82 3.847-19.82 3.847s7.861-6.774 16.14-1.254c8.278 5.52-5.854-0.836-10.37 4.516 0 0 3.512-1.589 3.596 1.087s-9.868 4.265-14.969-0.92c0 0 8.948 10.872 17.98 5.436 0 0-3.596 3.596-11.039 2.927s-9.617 3.345-9.617 3.345 2.843-2.509 5.603-0.334c2.76 2.174 0.836 6.188-9.45 2.843-10.285-3.345-18.314 1.004-18.314 1.004s11.792-3.178 13.046 3.345-9.032 3.763-9.032 3.763 3.094 2.927 7.443 1.505c0 0-4.265 2.007-11.457 1.422 0 0 59.031 16.39 45.614 35.959 0 0 6.068-4.432 4.73-19.402 0 0 5.604-10.453 9.366-16.557 3.763-6.105 5.519 1.224 10.203 0.655 4.683-0.571 12.21 6.872 10.454 9.297 0 0 4.683 3.512 5.938 0.585 0 0 3.178-0.251 3.262-2.843 0 0 4.601 0-1.504-9.868-6.105-9.872-5.185-11.879-6.858-11.962zm-5.546 2.045c-0.056-0.299-0.124-0.589-0.246-0.863 1.083 0.741 1.729 1.583 2.106 2.239-1.671-0.354-1.76-0.835-1.86-1.376z"/></svg>
+                            <img src="img/horse.svg" width="45px" id="navbarLogo">
                             <b id="navbarTitle" class="raleway-thin">Canterbury</b>
                         </a>
                     </nav>
@@ -40,7 +30,7 @@
                     <!-- Filler for the top navbar -->
                 </div>
                 <div class="col-2">
-                    <nav class="navbar navbar-expand" style="padding-top: 15px;">
+                    <nav class="navbar navbar-dark navbar-expand" style="padding-top: 15px;">
                         <div class="navbar-nav" style="">
                             <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
                             <a class="nav-item nav-link" href="gallery.html">Gallery</a>
@@ -53,26 +43,23 @@
             </div>
 
             <!-- MIDDLE CONTENT -->
-            <div id="mainCover" class="container-fluid justify-content-center" style="height: 100%; z-index: 5">
-                <div class="row align-items-center justify-content-center" style="min-height: 100%;">
-                    <div class="col-5" style="text-align: center;">
-                        <div style="color: white; padding: 15px; background: rgba(0,0,0,0.4);">
-                            <h3 class="display-3 text-light raleway-thin ts-display" style="letter-spacing: 20px;">CANTERBURY</h3>
-                            <h3 id="changingSubtitle" class="raleway-thin ts-display" style="text-align: center;">THE HOME OF THE CANTERBURY TALES</h3>
-                        </div>
+            <div id="mainCover" class="d-flex flex-row justify-content-center" style="height: 100%;">
+                <div class="d-flex align-items-center">
+                    <div style="color: white; padding: 15px; background: rgba(0,0,0,0.4);">
+                        <h3 class="display-3 text-light raleway-thin ts-display" style="letter-spacing: 20px;">CANTERBURY</h3>
+                        <h3 id="changingSubtitle" class="raleway-thin ts-display" style="text-align: center;">THE HOME OF THE CANTERBURY TALES</h3>
                     </div>
                 </div>
-                
-                <div id="introTopBoxDownArrow" style="width: 100%; text-align: center;">
-                    <a href="#afterBeginning">
+                <div id="introTopBoxDownArrow">
+    				<a href="#afterBeginning">
                         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-down-circle"><circle cx="12" cy="12" r="10"></circle><polyline points="8 12 12 16 16 12"></polyline><line x1="12" y1="8" x2="12" y2="16"></line></svg>
                     </a>
-                </div>
+    			</div>
             </div>
         </div>
 
         <!-- Actual content -->
-        <div id="afterBeginning" class="container-flex bg-light" style="padding-top: 6rem;">
+        <div id="afterBeginning" class="container-flex bg-light" style="padding-top: 2rem;">
             <div class="row justify-content-center" >
                 <div class="col-6">
                     <h1 class="raleway-thin" style="text-align: center;">Why Canterbury, England?</h1>
@@ -86,10 +73,6 @@
             <div class="row justify-content-center mt-25">
                 <div class="col-5">
                     <p>Canterbury is the home of the Canterbury Cathedral, one of the oldest and most famous Christian structures in England. It is also the location of the death of Saint Thomas Becket, the Archbishop of Canterbury who was murdered in 1170, giving the location some history to look for.</p>
-                </div>
-            </div>
-            <div class="row justify-content-center mt-25">
-                <div class="col-5">
                     <p>If you like history, literature, or travelling, Canterbury is a great place because of its historic background, the Canterbury Tales were written during the pilgrimage to the Canterbury Cathedral to honor the death of Becket.</p>
                     <p class="mt-25">You could also visit one of these other locations as a part of your vacation, but that's not all. For more information, ask a tour guide.</p>
                     <ul class="list-group list-group-flush">
@@ -99,100 +82,6 @@
                         <li class="list-group-item">Westgate <small class="text-muted">- historic gatehouse with a pub and nice views</small></li>
                         <li class="list-group-item">Canterbury Castle <small class="text-muted">- William the Conqueror's ruined 1070 castle</small></li>
                     </ul>
-                </div>
-            </div>
-            <div class="row justify-content-center" style="margin-top: 2rem;">
-                <div class="col-6">
-                    <h1 class="raleway-thin" style="text-align: center;">Images</h1>
-                </div>
-            </div>
-            <div class="row justify-content-center">
-                <div class="col-2">
-                    <hr class="fancySeparator">
-                </div>
-            </div>
-            <div class="row justify-content-center mt-4">
-                <div class="col-6">
-                    <div class="card-columns">
-                        <div class="card">
-                            <img class="card-img-top" src="img/gallery/cathedralday.jpg" alt="Canterbury">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Canterbury Cathedral<br>
-                                    <span class="text-muted">
-                                        Visit the historical cathedral and see history unfold before your eyes.
-                                    </span>
-                                </p>
-                                <!-- todo -->
-                                <a href="https://www.tripadvisor.com/Attraction_Review-g186311-d188526-Reviews-Canterbury_Cathedral-Canterbury_Kent_England.html" class="underlined card-link">View Information</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="img/gallery/westgate_gardens.png" alt="Canterbury">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Westgate Gardens<br>
-                                    <span class="text-muted">
-                                        Walk around a beautiful park, sit along the riverside, have a picnic, and watch as the day flies by. 
-                                    </span>
-                                </p>
-                                <!-- todo -->
-                                <a href="https://www.tripadvisor.com/Attraction_Review-g186311-d2055164-Reviews-Westgate_Gardens-Canterbury_Kent_England.html" class="underlined card-link">View Information</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="img/gallery/Butter-Market-Canterbury.jpg" alt="Canterbury">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Buttermarket<br>
-                                    <span class="text-muted">
-                                        See beautiful, historic sights. Walk around and enjoy the food and entertainment that Canterbury has to offer.
-                                    </span>
-                                </p>
-                                <!-- todo -->
-                                <a href="https://www.tripadvisor.com/Attraction_Review-g186311-d7759283-Reviews-Buttermarket-Canterbury_Kent_England.html" class="underlined card-link">View Information</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="img/gallery/Greyfriars%20Chapel%20and%20Franciscan%20Gardens.png" alt="Canterbury">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Greyfriars Chapel and Franciscan Gardens<br>
-                                    <span class="text-muted">
-                                        Another religious sight to see when you come to Canterbury. One of the most beautiful gardens in Canterbury.
-                                    </span>
-                                </p>
-                                <!-- todo -->
-                                <a href="https://www.tripadvisor.com/Attraction_Review-g186311-d1994732-Reviews-Greyfriars_Chapel_and_Franciscan_Gardens-Canterbury_Kent_England.html" class="underlined card-link">View Information</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="img/gallery/Christ%20Church%20Gate.png" alt="Canterbury">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    Christ Church Gate<br>
-                                    <span class="text-muted">
-                                        Walk around and admire the incredible architecture and design of the buildings.
-                                    </span>
-                                </p>
-                                <!-- todo -->
-                                <a href="https://www.tripadvisor.com/Attraction_Review-g186311-d7762285-Reviews-Christ_Church_Gate-Canterbury_Kent_England.html" class="underlined card-link">View Information</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <img class="card-img-top" src="img/gallery/The%20Beaney%20House%20of%20Art%20&%20Knowledge.png" alt="Canterbury">
-                            <div class="card-body">
-                                <p class="card-text">
-                                    The Beaney House of Art & Knowledge<br>
-                                    <span class="text-muted">
-                                        Visit this incredible art gallery and museum, free of cost.
-                                    </span>
-                                </p>
-                                <!-- todo -->
-                                <a href="https://www.tripadvisor.com/Attraction_Review-g186311-d261268-Reviews-The_Beaney_House_of_Art_Knowledge-Canterbury_Kent_England.html" class="underlined card-link">View Information</a>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
@@ -224,7 +113,7 @@
                         subtitleObj.text(newSubtitle);
                         subtitleObj.fadeIn();
                     });
-                }, 10000);
+                }, 5000);
 
                 //smooth scroll stolen from https://www.w3schools.com/jquery/tryit.asp?filename=tryjquery_eff_animate_smoothscroll
                 // Add smooth scrolling to all links
@@ -247,7 +136,6 @@
                         });
                     } // End if
                 });
-                
             });
         </script>
     </body>
