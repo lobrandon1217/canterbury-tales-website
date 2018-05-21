@@ -1,0 +1,24 @@
+{
+  "name": "canterburytaleswebsite",
+  "version": "1.0.0",
+  "description": "Welcome. This is a website developed by Brandon Lo for the mandatory literary fair for Honors British Literature.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lobrandon1217/canterbury-tales-website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lobrandon1217/canterbury-tales-website/issues"
+  },
+  "homepage": "https://github.com/lobrandon1217/canterbury-tales-website#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
