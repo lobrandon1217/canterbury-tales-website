@@ -42,7 +42,7 @@
         <!-- CONTENT -->
         <div class="container-fluid bg-light" style="padding-top: 8rem; min-height: 100vh; padding-bottom: 4rem;">
             <div class="row justify-content-center">
-                <div class="col-6">
+                <div class="col-sm-12 col-lg-6">
                     <div class="display-4 raleway-thin" style="text-align: center;">Book a Flight</div>
                 </div>
             </div>
@@ -52,8 +52,8 @@
                 </div>
             </div>
             <!-- FORM TO BOOK A FLIGHT -->
-            <div class="row justify-content-center">
-                <div class="col-sm-12 col-md-4">
+            <div class="row justify-content-center" id="actualFormContainer">
+                <div class="col-sm-12 col-lg-4">
                     <p>
                         Finally convinced? Purchase a ticket here.<br><br>
                         Limited to one ticket per customer.<br>
@@ -69,11 +69,202 @@
                         <div class="form-group">
                             <input type="text" class="form-control" id="lastNameInput" placeholder="Last Name" required>
                         </div>
-                        
+                        <div class="form-group">
+                            <p>Choose your seat</p>
+                            <!--SEAT SELECTION-->
+                            <div class="container" id="seatSelection">
+                                <!--FIRST CLASS ROW 1-->
+                                <div class="row mt-2">
+                                    <div class="col text-right">
+                                        <button type="button" class="btn btn-lg btn-secondary">1A</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">1B</button>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        FIRST CLASS
+                                    </div>
+                                    <div class="col text-left">
+                                        <button type="button" class="btn btn-lg btn-secondary">1C</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">1D</button>
+                                    </div>
+                                </div>
+                                <!--FIRST CLASS ROW 2-->
+                                <div class="row mt-2">
+                                    <div class="col text-right">
+                                        <button type="button" class="btn btn-lg btn-secondary">2A</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">2B</button>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                    
+                                    </div>
+                                    <div class="col text-left">
+                                        <button type="button" class="btn btn-lg btn-secondary">2C</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">2D</button>
+                                    </div>
+                                </div>
+                                <!--FIRST CLASS ROW 3-->
+                                <div class="row mt-2">
+                                    <div class="col text-right">
+                                        <button type="button" class="btn btn-lg btn-secondary">3A</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">3B</button>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                    
+                                    </div>
+                                    <div class="col text-left">
+                                        <button type="button" class="btn btn-lg btn-secondary">3C</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">3D</button>
+                                    </div>
+                                </div>
+                                <!--ECONOMY CLASS ROW 1-->
+                                <div class="row mt-2">
+                                    <div class="col text-right">
+                                        <button type="button" class="btn btn-lg btn-secondary">4A</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">4B</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">4C</button>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        ECONOMY
+                                    </div>
+                                    <div class="col text-left">
+                                        <button type="button" class="btn btn-lg btn-secondary">4D</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">4E</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">4F</button>
+                                    </div>
+                                </div>
+                                <!--ECONOMY CLASS ROW 2-->
+                                <div class="row mt-2">
+                                    <div class="col text-right">
+                                        <button type="button" class="btn btn-lg btn-secondary">5A</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">5B</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">5C</button>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        
+                                    </div>
+                                    <div class="col text-left">
+                                        <button type="button" class="btn btn-lg btn-secondary">5D</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">5E</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">5F</button>
+                                    </div>
+                                </div>
+                                <!--ECONOMY CLASS ROW 3-->
+                                <div class="row mt-2">
+                                    <div class="col text-right">
+                                        <button type="button" class="btn btn-lg btn-secondary">6A</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">6B</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">6C</button>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        
+                                    </div>
+                                    <div class="col text-left">
+                                        <button type="button" class="btn btn-lg btn-secondary">6D</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">6E</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">6F</button>
+                                    </div>
+                                </div>
+                                <!--ECONOMY CLASS ROW 4-->
+                                <div class="row mt-2">
+                                    <div class="col text-right">
+                                        <button type="button" class="btn btn-lg btn-secondary">7A</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">7B</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">7C</button>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        
+                                    </div>
+                                    <div class="col text-left">
+                                        <button type="button" class="btn btn-lg btn-secondary">7D</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">7E</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">7F</button>
+                                    </div>
+                                </div>
+                                <!--ECONOMY CLASS ROW 5-->
+                                <div class="row mt-2">
+                                    <div class="col text-right">
+                                        <button type="button" class="btn btn-lg btn-secondary">8A</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">8B</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">8C</button>
+                                    </div>
+                                    <div class="col-3 text-center">
+                                        
+                                    </div>
+                                    <div class="col text-left">
+                                        <button type="button" class="btn btn-lg btn-secondary">8D</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">8E</button>
+                                        <button type="button" class="btn btn-lg btn-secondary">8F</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group text-center">
+                            <button class="btn btn-success">Purchase Ticket ~ $0.00</button>
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
         <!-- END CONTENT -->
+        <script>
+            /**
+             * SEAT SELECTION AND FORM
+             */
+            var selectedSeatNum = "";
+            $("#seatSelection button").click(function(){
+                // IF THIS BUTTON IS DISABLED, STOP
+                if($(this).hasClass("disabled")) return;
+                // REMOVE THE EXISTING CLICKED BUTTON
+                $("#seatSelection button").each(function(index, elem){
+                    $(elem).removeClass("btn-primary");
+                    $(elem).addClass("btn-secondary");
+                });
+                // SET THIS BUTTON TO THE BTN-PRIMARY
+                $(this).addClass("btn-primary");
+                $(this).removeClass("btn-secondary");
+                // SET THE SEAT NUM SELECTED TO THIS TEXT
+                selectedSeatNum = $(this).text();
+            });
+            
+            $("#bookForm").submit(function(submitEvent){
+                submitEvent.preventDefault();
+                $.ajax("/purchaseTicket",{
+                    "method": "POST",
+                    "data": {
+                        "firstName": $("#firstNameInput").val(),
+                        "middleName": $("#middleNameInput").val(),
+                        "lastName": $("#lastNameInput").val(),
+                        "seat": selectedSeatNum
+                    }
+                }).done(function(data){
+                    if(data.success) {
+                        alert("Thank you for purchasing! See you January 2nd.");
+                        location.reload();
+                    } else {
+                        alert(data.error);
+                    }
+                });
+            });
+            
+            /**
+             * GET TAKEN SEATS
+             */
+            var formContainer = $("#actualFormContainer");
+            formContainer.addClass("d-none"); // HIDE THE FORM UNTIL IT IS PROCESSED
+            $.ajax("/getSeats", {
+                'method': 'POST',
+            }).done(function(data){
+                $("#seatSelection button").each(function(index, elem){
+                    let obj = $(this);
+                    if( obj.text() in data ) {
+                        obj.addClass('disabled');
+                        obj.tooltip({
+                            title: `This seat is taken by ${data[obj.text()].firstName} ${data[obj.text()].lastName}`
+                        });
+                    }
+                });
+                formContainer.removeClass('d-none');
+            });
+
+        </script>
     </body>
 </html>
