@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canterbury Travel - Plan</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav id="topNav" class="navbar navbar-expand-lg navbar-light fixed-top w-100">
+            <!-- Toggler button -->
+            <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container py-2" style="padding-left: 10vw; padding-right: 10vw;">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#">TRAVEL</a>
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">HOME</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">PLANS <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">BOOK</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Then, the content -->
+        <div class="container" style="padding-top: 8rem;">
+            <!-- Section header -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center oswald" style="letter-spacing: 0.15em; text-indent: 0.15em;">WHERE TO STAY</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container" style="padding-top: 8rem;">
+            <!-- Section header -->
+            <div class="row">
+                <div class="col">
+                    <h2 class="text-center oswald" style="letter-spacing: 0.15em; text-indent: 0.15em;">WHAT TO DO</h2>
+                </div>
+            </div>
+        </div>
+        <div style="background: #e9ecef; padding: 2rem;">
+            <div class="container">
+                <div style="font-size: 24px;" class="text-center">
+                    <span>I want to</span>
+                    <select id="ToDoSelect" class="form-control" style="width: auto; display: inline-block;">
+                        <option value="1">go sightseeing</option>
+                        <option value="2">visit museums</option>
+                        <option value="3">travel the Pilgrims' Way</option>
+                        <option value="4">eat at restaurants</option>
+                        <option value="5">go shopping</option>
+                        <option value="6">have fun</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        <div class="py-2 mb-4" style="background: #e9ecef;">
+            <div class="container">
+                <div id="cardColumnsToDo" class="card-columns">
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="/jquery.min.js"></script>
+        <script src="/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/parallax.min.js"></script>
+        <script>
+            // window goes down, navbar gets darker
+            $(document).scroll(function() {
+                $("#topNav").toggleClass( "bg-tl navbar-dark", $(document).scrollTop() >= ( $(window).height() * (1/3) ) );
+            });
+
+            // function to add cards to the column
+            function addToColumn( title, imgUrl, description, link ) {
+                $("#cardColumnsToDo").append(`
+                    <div class="card shadow border">
+                        <img class="card-img-top" src="${imgUrl}" alt="${title}">
+                        <div class="card-body">
+                            <h5 class="card-title">${title}</h5>
+                            <p class="card-text">${description}</p>
+                            <p class="card-text"><a href="${link}" target="_window" class="fancy text-muted">More Info</a></p>
+                        </div>
+                    </div>
+                `);
+            }
+
+            // information for updating
+            const cardsToDo = {
+                1: [
+                    {
+                        title: 'Canterbury Cathedral',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-o/01/13/82/fb/cathedral-from-outside.jpg',
+                        description: 'The first Church of England, this historic gothic-style cathedral dates back to 597, which served as a rich and powerful monastery of Benedictine monks in the 12th century.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d188526-Reviews-Canterbury_Cathedral-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'St. Augustine\'s Abbey',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-o/0f/0b/7c/ab/st-augustine-s-abbey.jpg',
+                        description: 'St Augustine\'s Abbey was a Benedictine monastery in Canterbury, Kent, England. The abbey was founded in 598 and functioned as a monastery until its dissolution in 1538 during the English Reformation.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d218209-Reviews-St_Augustine_s_Abbey-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Greyfriars Chapel and Franciscan Gardens',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-o/03/6c/18/c2/greyfriars-chapel-and.jpg',
+                        description: 'A sacred & religious site, these gardens provide a perfect place for taking pictures.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d1994732-Reviews-Greyfriars_Chapel_and_Franciscan_Gardens-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Eastbridge Hospital',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-w/09/be/65/9e/eastbridge-hospital.jpg',
+                        description: 'The Hospital of St Thomas the Martyr of Eastbridge was founded in the 12th century in Canterbury, England, to provide overnight accommodation for poor pilgrims to the shrine of St Thomas Becket.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d1994731-Reviews-Eastbridge_Hospital-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'St. Martin\'s Church',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-o/01/c0/8a/6b/st-martin-s-church-canterbury.jpg',
+                        description: 'St Martin\'s Church in Bladon near Woodstock, Oxfordshire, England, is the Church of England parish church of Bladon-with-Woodstock.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d215364-Reviews-St_Martin_s_Church-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Canterbury City Walls',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-o/07/fa/9a/a2/canterbury-ciity-wall.jpg',
+                        description: 'Canterbury city walls are a sequence of defensive walls built around the city of Canterbury in Kent, England.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d7762215-Reviews-Canterbury_City_Walls-Canterbury_Kent_England.html'
+                    }
+                    
+                ], // sightseeing
+                2: [
+                    {
+                        title: 'The Beaney House of Art & Knowledge',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-o/0b/99/7d/9d/the-beaney-house-of-art.jpg',
+                        description: 'The Beaney House of Art & Knowledge is an Art Gallery, Library and Visitor Information Centre situated in the heart of historic Canterbury. This award winning facility provides state-of-the-art exhibition galleries, excellent educational facilities and a varied programme of events for all ages.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d261268-Reviews-The_Beaney_House_of_Art_Knowledge-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'The Kent Museum of Freemasonry',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-o/07/4d/f0/53/the-kent-library-museum.jpg',
+                        description: 'Open to all and located in the heart of Canterbury\'s tourist route, you will find the Kent Museum of Freemasonry close to the Westgate Towers and a five minute stroll from the Cathedral. Entrance is free of charge, although voluntary donations are welcomed.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d3510281-Reviews-The_Kent_Museum_of_Freemasonry-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Westgate Towers Museum & Viewpoint',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-w/07/fc/37/0f/west-gate-tower.jpg',
+                        description: 'Built in 1380 the Westgate Towers is England\'s largest surviving Medieval Gateway. Explore its unique history and take in some of the most iconic views in the county of Kent. Approximately 60 foot hight and built of Kentish ragstone c1380, it is the last surviving of Canterbury\'s 7 medieval gates, one of Canterbury\'s iconic landmarks.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d7762348-Reviews-Westgate_Towers_Museum_Viewpoint-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Canterbury Roman Museum',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-o/12/4e/9c/48/roman-museum.jpg',
+                        description: 'Canterbury Roman Museum’s story began on what appeared to be a rather unremarkable day in 1868. When workmen, digging trenches for a new drainage system, reached eight feet below street level they unwittingly unearthed a beautifully preserved Roman floor mosaic.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d215362-Reviews-Canterbury_Roman_Museum-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Lilford Gallery',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-o/05/fb/24/8a/lilford-gallery.jpg',
+                        description: 'An art museum with incredible displays of both modern and historic art.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d2573462-Reviews-Lilford_Gallery-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Conquest House Gallery',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-w/0c/cf/7b/01/conquest-house-canterbury.jpg',
+                        description: 'A museum that gives you an old-sensing feeling right from when you walk in through the door.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d10712842-Reviews-Conquest_House_Gallery-Canterbury_Kent_England.html'
+                    }
+                ], // museums
+                3: [],
+                4: [],
+                5: [],
+                6: []
+            };
+
+            // update the "What to do" section
+            function refreshToDo( choice ) {
+                let container = $("#cardColumnsToDo");
+                container.parent().slideUp(function(){
+                    container.empty();
+                    for(let index in cardsToDo[choice]){
+                        let obj = cardsToDo[choice][index];
+                        addToColumn( obj.title, obj.imgUrl, obj.description, obj.link );
+                    }
+                    container.parent().slideDown();
+                });
+            }
+            refreshToDo( 1 );
+ 
+            // on select change
+            $("#ToDoSelect").change(function(){
+                refreshToDo( $("#ToDoSelect option:selected").attr("value") );
+            });
+        </script>
+    </body>
+</html>
