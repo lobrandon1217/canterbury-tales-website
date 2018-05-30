@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Canterbury Travel - Plan</title>
+        <title>Canterbury Travel - Plans</title>
         <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
         <link rel="stylesheet" href="/css/bootstrap.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            @media (max-width: 991.98px) {
+                #topNav a {
+                    color: white;
+                }
+            }
+        </style>
     </head>
     <body>
         <!-- Navbar -->
@@ -17,19 +24,21 @@
             </button>
             <div class="container py-2" style="padding-left: 10vw; padding-right: 10vw;">
                 <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                    <a class="navbar-brand" href="#">TRAVEL</a>
+                    <a class="navbar-brand" href="#">
+                        <svg class="d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        CANTERBURY</a>
                     <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">HOME</a>
+                            <a class="nav-link" href="/">HOME</a>
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="#">PLANS <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">BOOK</a>
+                            <a class="nav-link" href="/book">BOOK</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">ABOUT</a>
+                            <a class="nav-link" href="/about">ABOUT</a>
                         </li>
                     </ul>
                 </div>
@@ -40,12 +49,45 @@
         <div class="container" style="padding-top: 8rem;">
             <!-- Section header -->
             <div class="row">
-                <div class="col">
-                    <h2 class="text-center oswald" style="letter-spacing: 0.15em; text-indent: 0.15em;">WHERE TO STAY</h2>
+                <div class="col" style="">
+                    <h2 class="text-center oswald pt-4" style="letter-spacing: 0.15em; text-indent: 0.15em;">WHERE TO STAY</h2>
                 </div>
             </div>
         </div>
-        <div class="container" style="padding-top: 8rem;">
+        <div class="py-4" >
+            <div class="container pb-2 border shadow-lg" style="background: #e9ecef;">
+                <div class="text-center mb-2" style="font-size: 24px; padding-top: 2rem;">
+                    Our recommendations are
+                </div>
+                <div class="card-group p-4">
+                    <div class="card">
+                      <img class="card-img-top" src="https://media-cdn.tripadvisor.com/media/photo-o/07/79/12/0f/exterior.jpg" alt="HOTEL 1">
+                      <div class="card-body">
+                        <h5 class="card-title">Best Western Abbots Barton Hotel</h5>
+                        <p class="card-text">This hotel is around $90.<br>There is free wifi and parking.<br>3 Star Hotel</p>
+                        <p class="card-text"><a class="fancy text-muted" href="https://www.tripadvisor.com/Hotel_Review-g186311-d239756-Reviews-Best_Western_Abbots_Barton_Hotel-Canterbury_Kent_England.html">Book Here</a></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="https://edge.media.datahc.com/HI352139701.jpg" alt="HOTEL 2">
+                      <div class="card-body">
+                        <h5 class="card-title">Premier Inn Canterbury City Centre Hotel</h5>
+                        <p class="card-text">This hotel is around $95.<br>There is free wifi and the staff is multilingual.<br>3 Star Hotel</p>
+                        <p class="card-text"><a class="fancy text-muted" href="https://www.tripadvisor.com/Hotel_Review-g186311-d5860385-Reviews-Premier_Inn_Canterbury_City_Centre_Hotel-Canterbury_Kent_England.html">Book Here</a></p>
+                      </div>
+                    </div>
+                    <div class="card">
+                      <img class="card-img-top" src="https://www.britainexpress.com/images/accommodation/lr/LR240062.jpg" alt="HOTEL 3">
+                      <div class="card-body">
+                        <h5 class="card-title">The Millers Arms</h5>
+                        <p class="card-text">This hotel is around $102.<br>There is free wifi.<br>4 Star Hotel</p>
+                        <p class="card-text"><a class="fancy text-muted" href="https://www.tripadvisor.com/Hotel_Review-g186311-d192185-Reviews-The_Millers_Arms-Canterbury_Kent_England.html">Book Here</a></p>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="container" style="padding-top: 2rem; ">
             <!-- Section header -->
             <div class="row">
                 <div class="col">
@@ -53,8 +95,8 @@
                 </div>
             </div>
         </div>
-        <div style="background: #e9ecef; padding: 2rem;">
-            <div class="container">
+        <div style="padding: 2rem;">
+            <div class="container py-4 border shadow-lg" style="background: #e9ecef;">
                 <div style="font-size: 24px;" class="text-center">
                     <span>I want to</span>
                     <select id="ToDoSelect" class="form-control" style="width: auto; display: inline-block;">
@@ -66,11 +108,11 @@
                         <option value="6">have fun</option>
                     </select>
                 </div>
-            </div>
-        </div>
-        <div class="py-2 mb-4" style="background: #e9ecef;">
-            <div class="container">
-                <div id="cardColumnsToDo" class="card-columns">
+                <div class="py-2 my-4" style="">
+                    <div class="container">
+                        <div id="cardColumnsToDo" class="card-columns">
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -179,10 +221,195 @@
                         link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d10712842-Reviews-Conquest_House_Gallery-Canterbury_Kent_England.html'
                     }
                 ], // museums
-                3: [],
-                4: [],
-                5: [],
-                6: []
+                3: [
+                    {
+                        title: 'White Cliffs of Dover',
+                        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/White_Cliffs_of_Dover_02.JPG/300px-White_Cliffs_of_Dover_02.JPG',
+                        description: 'The White Cliffs of Dover, part of the North Downs formation, is the name given to the region of English coastline facing the Strait of Dover and France.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186313-d214772-Reviews-White_Cliffs_of_Dover-Dover_Kent_England.html'
+                    },
+                    {
+                        title: 'Dover Castle',
+                        imgUrl: 'http://www.english-heritage.org.uk/remote/www.english-heritage.org.uk/content/properties/dover-castle/hero-carousel/dover-icon-hero-spring?w=1440&h=612&mode=crop&scale=both&cache=always&quality=60&anchor=middlecenter',
+                        description: 'Dover Castle is a medieval castle in Dover, Kent, England. It was founded in the 11th century and has been described as the "Key to England" due to its defensive significance throughout history. It is the largest castle in England.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186313-d189202-Reviews-Dover_Castle-Dover_Kent_England.html'
+                    },
+                    {
+                        title: 'St Paul\'s Cathedral',
+                        imgUrl: 'https://cdn.londonandpartners.com/asset/st-pauls-cathedral-st-pauls-cathedral-aee0a2dbd5fdba394bc84c3ba7809988.jpg',
+                        description: 'St Paul\'s Cathedral, London, is an Anglican cathedral, the seat of the Bishop of London and the mother church of the Diocese of London. It sits on Ludgate Hill at the highest point of the City of London and is a Grade I listed building.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186313-d189202-Reviews-Dover_Castle-Dover_Kent_England.html'
+                    },
+                    {
+                        title: 'Silent Pool',
+                        imgUrl: 'https://i1.trekearth.com/photos/321/silentpool2.jpg',
+                        description: 'Silent Pool is a spring-fed lake at the foot of the North Downs, about 6.5 kilometres east of Guildford in Surrey. It is managed together with the nearby Newlands Corner by the Surrey Wildlife Trust, within the privately owned Albury Estate.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186390-d9882801-Reviews-Silent_Pool-Guildford_Surrey_England.html'
+                    },
+                    {
+                        title: 'Stonehenge',
+                        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Stonehenge2007_07_30.jpg/1200px-Stonehenge2007_07_30.jpg',
+                        description: 'Stonehenge is a prehistoric monument in Wiltshire, England, 2 miles west of Amesbury. It consists of a ring of standing stones, with each standing stone around 13 feet high, 7 feet wide and weighing around 25 tons.',
+                        link: 'http://www.english-heritage.org.uk/visit/places/stonehenge/'
+                    },
+                    {
+                        title: 'Glastonbury Abbey',
+                        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/a/aa/Glastonburyabbey.jpg',
+                        description: 'Glastonbury Abbey was a monastery in Glastonbury, Somerset, England. Its ruins, a grade I listed building and scheduled ancient monument, are open as a visitor attraction.',
+                        link: 'http://www.glastonburyabbey.org/'
+                    },
+                    {
+                        title: 'Guildford Castle',
+                        imgUrl: 'https://i2-prod.getsurrey.co.uk/incoming/article9103050.ece/ALTERNATES/s1227b/JS61799887.jpg',
+                        description: 'Guildford Castle is in Guildford, Surrey, England. It is thought to have been built shortly after the 1066 invasion of England by William the Conqueror.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186390-d4007575-Reviews-Guildford_Castle-Guildford_Surrey_England.html'
+                    },
+                    {
+                        title: 'Chilham Castle',
+                        imgUrl: 'http://www.chilham-castle.co.uk/wp-content/uploads/2015/09/Chilham-Castle.jpg',
+                        description: 'Chilham Castle is a manor house and keep in the village of Chilham, between Ashford and Canterbury in the county of Kent, England.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g1648464-d2460435-Reviews-Chilham_Castle_Gardens-Chilham_Kent_England.html'
+                    },
+                    {
+                        title: 'The White Horse Inn',
+                        imgUrl: 'https://upload.wikimedia.org/wikipedia/commons/5/56/White_Horse_Inn%2C_Cilcain_-_DSC06081.JPG',
+                        description: 'Comfort food and seasonal specials, plus real ales in 16th-century inn with open fire, plus garden.',
+                        link: 'https://www.whitehorsecanterbury.co.uk/'
+                    },
+                    {
+                        title: 'Rochester Cathedral',
+                        imgUrl: 'https://i.pinimg.com/originals/e6/74/e8/e674e8d5f76b627361e9e1e5124f1e90.jpg',
+                        description: 'Rochester Cathedral, formally the Cathedral Church of Christ and the Blessed Virgin Mary, is an English church of Norman architecture in Rochester, Kent.',
+                        link: 'https://www.rochestercathedral.org/'
+                    },
+                    {
+                        title: 'Rochester Cathedral',
+                        imgUrl: 'https://i.pinimg.com/originals/e6/74/e8/e674e8d5f76b627361e9e1e5124f1e90.jpg',
+                        description: 'Rochester Cathedral, formally the Cathedral Church of Christ and the Blessed Virgin Mary, is an English church of Norman architecture in Rochester, Kent.',
+                        link: 'https://www.rochestercathedral.org/'
+                    },
+                    {
+                        title: 'Canterbury Cathedral',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-o/01/13/82/fb/cathedral-from-outside.jpg',
+                        description: 'The first Church of England, this historic gothic-style cathedral dates back to 597, which served as a rich and powerful monastery of Benedictine monks in the 12th century.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d188526-Reviews-Canterbury_Cathedral-Canterbury_Kent_England.html'
+                    }
+                    
+                ], //pilgrims way
+                4: [
+                    {
+                        title: 'Kathton House',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/05/0e/02/d2/kathton-house.jpg',
+                        description: 'Intimate Modern British dining using local venison, lamb and seafood, plus morning coffee.',
+                        link: 'https://www.tripadvisor.com/Restaurant_Review-g1968641-d1379114-Reviews-Kathton_House-Sturry_Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Il Posticino Restaurant',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/07/3f/37/2c/il-posticino-authentic.jpg',
+                        description: 'Italian Restaurant.',
+                        link: 'https://www.tripadvisor.co.uk/Restaurant_Review-g186311-d7615806-Reviews-Il_Posticino_Restaurant-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Cafe du Soleil',
+                        imgUrl: 'http://cafedusoleil.co.uk/wp-content/uploads/2016/01/CDS-terrace.jpg',
+                        description: 'A low-lit, brick-walled 18th-century mill restaurant has a terrace and serves Mediterranean cuisine.',
+                        link: 'https://www.tripadvisor.com/Restaurant_Review-g186311-d1958801-Reviews-Cafe_du_Soleil-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'The Haywain',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/06/b3/a9/b7/haywain-front.jpg',
+                        description: 'British bar and pub.',
+                        link: 'https://www.tripadvisor.com/Restaurant_Review-g13432710-d2236429-Reviews-The_Haywain-Bramling_Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'The Corner House Canterbury Restaurant',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/0b/ea/c3/47/the-corner-house-canterbury.jpg',
+                        description: 'A Euro-British restaurant with vegetarian selections.',
+                        link: 'https://www.tripadvisor.com/Restaurant_Review-g186311-d10458885-Reviews-The_Corner_House_Canterbury_Restaurant-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'The Lady Luck',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/0a/fa/d6/ef/the-lady-luck.jpg',
+                        description: 'Convivial real ale pub by day turning venue for alternative DJs, plus punk and ska bands at night.',
+                        link: 'https://www.tripadvisor.com/Restaurant_Review-g186311-d2049033-Reviews-The_Lady_Luck-Canterbury_Kent_England.html'
+                    }
+                ], // restaurants
+                5: [
+                    {
+                        title: 'The Fudge Kitchen Ltd',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/07/0a/44/59/fudge-kitchen.jpg',
+                        description: 'Gift & Specialty shop.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d5505899-Reviews-Fudge_Kitchen-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'The Goods Shed',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/07/4e/fe/31/the-goods-shed-farmers.jpg',
+                        description: 'Farmers market, food hall and restaurant.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d2295935-Reviews-The_Goods_Shed-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Canterbury Glass Art',
+                        imgUrl: 'http://thekingsmile.org.uk/wp-content/uploads/2015/02/cantglass1.jpg',
+                        description: 'Canterbury Glass Art is a gallery and workshop for Minster Glass Studio. Watch as we create glass figurines and Jewellery as you browse the bright and spacious gallery. All the items are made by us in the UK. Groups are welcome.Wheelchair accessible Free demonstrationsEnglish, Spanish and Japanese spoken.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d4990910-Reviews-Canterbury_Glass_Art-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Lilford Gallery',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/05/fb/24/af/lilford-gallery.jpg',
+                        description: 'Commercial art gallery.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d2573462-Reviews-Lilford_Gallery-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Whitefriars Shopping Centre',
+                        imgUrl: 'https://www.canterbury.co.uk/images/whitefriars_shopping_centre_canterbury.jpg',
+                        description: 'Whitefriars Shopping Centre is a shopping centre in Canterbury, Kent, England. It is the biggest shopping centre in East Kent.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d2437776-Reviews-Whitefriars_Shopping_Centre-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Madame Oiseau',
+                        imgUrl: 'http://thekingsmile.org.uk/wp-content/uploads/2013/11/madame-oiseau-sq-a-884x1024.jpg',
+                        description: 'Chocolate Shop.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d5035091-Reviews-Madame_Oiseau-Canterbury_Kent_England.html'
+                    }
+                ], // shopping
+                6: [
+                    {
+                        title: 'Escape Kent',
+                        imgUrl: 'https://www.escapekent.com/wp-content/uploads/2016/12/Side6-1024x1024.jpg',
+                        description: 'Escape Kent is an exhilarating live escape game situated in the heart of Canterbury. Locked in a room with the rest of your team you have an hour to decipher the challenges and puzzles to make your escape. We have a variety of fully immersive and challenging games designed to test your skill and logic ability, can you work as a team and find your way to victory?',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d10234753-Reviews-Escape_Kent-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Escape In The Towers',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/11/0e/74/f4/the-gaol.jpg',
+                        description: 'Canterbury\'s award wining Escape Room experience set within the real cells of its former city gaol built in the 1830\'s! It\'s 1994 and you\'ve stumbled across Dr Wellington\'s abandoned laboratory at the former Canterbury Experimental Electric Company founded in 1883. Dr Wellington based his controversial crime and punishment experiments in the treacherous cells of the former city gaol which has since laid abandoned for 80 years after his sudden and mysterious disappearance. You and your cohorts have just 60 minutes to escape before you are trapped for eternity and in certain mortal danger, sharing the fate of his many victims!',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d12289086-Reviews-Escape_In_The_Towers-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Canterbury Escape Room',
+                        imgUrl: 'http://www.escapereview.co.uk/wp-content/uploads/2017/09/opengraph.png',
+                        description: 'Canterbury\'s original escape game, based on the historic Westgate jail. Play in teams of two to five, with friends, family or colleagues in an attempt to escape in under an hour. Celebrate your escape with our beer and champagne packages.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d10839572-Reviews-Canterbury_Escape_Room-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Curzon Canterbury',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/07/41/4f/fd/curzon-canterbury.jpg',
+                        description: 'Movie theater.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g186311-d7208562-Reviews-Curzon_Canterbury-Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'The Big Fun House',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/07/aa/83/03/under-3-s-play-area.jpg',
+                        description: 'At Big Fun House we know that every child is different, which is why we are so much more than just soft play Let your little one unleash their imagination in our Tots Town. Train enthusiasts can tinker with the trains at Tots Town Train Station, wannabe chefs can cook up a storm in our Kids Kitchen and your little DIY expert can get busy at the Whippersnappers Workshop.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g1648457-d7785426-Reviews-The_Big_Fun_House-Chartham_Canterbury_Kent_England.html'
+                    },
+                    {
+                        title: 'Greenfields Shooting Grounds',
+                        imgUrl: 'https://media-cdn.tripadvisor.com/media/photo-s/0b/ad/01/dd/photo1jpg.jpg',
+                        description: 'Shooting range.',
+                        link: 'https://www.tripadvisor.com/Attraction_Review-g1968641-d2226746-Reviews-Greenfields_Shooting_Grounds-Sturry_Canterbury_Kent_England.html'
+                    }
+                ] // fun
             };
 
             // update the "What to do" section

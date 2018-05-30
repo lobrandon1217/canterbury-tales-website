@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Canterbury Travel - Book</title>
+        <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400" rel="stylesheet">
+        <link rel="stylesheet" href="/css/bootstrap.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <style>
+            @media (max-width: 991.98px) {
+                #topNav a {
+                    color: white;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+        <nav id="topNav" class="navbar navbar-expand-lg navbar-light fixed-top w-100">
+            <!-- Toggler button -->
+            <button class="navbar-toggler float-right" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="container py-2" style="padding-left: 10vw; padding-right: 10vw;">
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                    <a class="navbar-brand" href="#">
+                        <svg class="d-inline-block align-top" xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-briefcase"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+                        CANTERBURY
+                    </a>
+                    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">HOME</a>
+                        </li>
+                        <li class="nav-item ">
+                            <a class="nav-link" href="/plan">PLANS</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#">BOOK <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/about">ABOUT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Then, the content -->
+        <div class="container" style="padding-top: 8rem;">
+            <!-- Section header -->
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                    <h2 class="text-center oswald pt-4" style="letter-spacing: 0.15em; text-indent: 0.15em;">BOOK A FLIGHT</h2>
+                </div>
+            </div>
+        </div>
+        <div class="container border shadow-lg p-4 my-4" style="background: #e9ecef;">
+            <div class="row">
+                <div class="col">
+                    <form id="bookForm">
+                        <p>Please enter all required information.</p>
+                        <div class="form-row">
+                            <div class="col-4">
+                                <input type="text" class="form-control" name="fname" placeholder="First Name*" required>
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" name="mname" maxlength="1" placeholder="Middle Initial">
+                            </div>
+                            <div class="col-6">
+                                <input type="text" class="form-control" name="lname" placeholder="Last Name*" required>
+                            </div>
+                        </div>
+                        <hr class="my-4">
+                        <p>Please choose a seat.</p>
+                        <div class="container" id="seatContainer">
+                            <!-- first class -->
+                            <div class="row mb-2">
+                                <div class="col-5 text-right">
+                                    <button type="button" class="btn btn-outline-secondary">1A</button>
+                                    <button type="button" class="btn btn-outline-secondary">1B</button>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <small class="text-muted">First Class</small>
+                                </div>
+                                <div class="col-5 text-left">
+                                    <button type="button" class="btn btn-outline-secondary">1C</button>
+                                    <button type="button" class="btn btn-outline-secondary">1D</button>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-5 text-right">
+                                    <button type="button" class="btn btn-outline-secondary">2A</button>
+                                    <button type="button" class="btn btn-outline-secondary">2B</button>
+                                </div>
+                                <div class="col-2 text-center">
+                                    
+                                </div>
+                                <div class="col-5 text-left">
+                                    <button type="button" class="btn btn-outline-secondary">2C</button>
+                                    <button type="button" class="btn btn-outline-secondary">2D</button>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-5 text-right">
+                                    <button type="button" class="btn btn-outline-secondary">3A</button>
+                                    <button type="button" class="btn btn-outline-secondary">3B</button>
+                                </div>
+                                <div class="col-2 text-center">
+                                    
+                                </div>
+                                <div class="col-5 text-left">
+                                    <button type="button" class="btn btn-outline-secondary">3C</button>
+                                    <button type="button" class="btn btn-outline-secondary">3D</button>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-5 text-right">
+                                    <button type="button" class="btn btn-outline-secondary">4A</button>
+                                    <button type="button" class="btn btn-outline-secondary">4B</button>
+                                    <button type="button" class="btn btn-outline-secondary">4C</button>
+                                </div>
+                                <div class="col-2 text-center">
+                                    <small class="text-muted">Economy</small>
+                                </div>
+                                <div class="col-5 text-left">
+                                    <button type="button" class="btn btn-outline-secondary">4D</button>
+                                    <button type="button" class="btn btn-outline-secondary">4E</button>
+                                    <button type="button" class="btn btn-outline-secondary">4F</button>
+                                </div>
+                            </div>
+                            <!-- economy class -->
+                            <div class="row mb-2">
+                                <div class="col-5 text-right">
+                                    <button type="button" class="btn btn-outline-secondary">5A</button>
+                                    <button type="button" class="btn btn-outline-secondary">5B</button>
+                                    <button type="button" class="btn btn-outline-secondary">5C</button>
+                                </div>
+                                <div class="col-2 text-center">
+                                    
+                                </div>
+                                <div class="col-5 text-left">
+                                    <button type="button" class="btn btn-outline-secondary">5D</button>
+                                    <button type="button" class="btn btn-outline-secondary">5E</button>
+                                    <button type="button" class="btn btn-outline-secondary">5F</button>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-5 text-right">
+                                    <button type="button" class="btn btn-outline-secondary">6A</button>
+                                    <button type="button" class="btn btn-outline-secondary">6B</button>
+                                    <button type="button" class="btn btn-outline-secondary">6C</button>
+                                </div>
+                                <div class="col-2 text-center">
+                                </div>
+                                <div class="col-5 text-left">
+                                    <button type="button" class="btn btn-outline-secondary">6D</button>
+                                    <button type="button" class="btn btn-outline-secondary">6E</button>
+                                    <button type="button" class="btn btn-outline-secondary">6F</button>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-5 text-right">
+                                    <button type="button" class="btn btn-outline-secondary">7A</button>
+                                    <button type="button" class="btn btn-outline-secondary">7B</button>
+                                    <button type="button" class="btn btn-outline-secondary">7C</button>
+                                </div>
+                                <div class="col-2 text-center">
+                                </div>
+                                <div class="col-5 text-left">
+                                    <button type="button" class="btn btn-outline-secondary">7D</button>
+                                    <button type="button" class="btn btn-outline-secondary">7E</button>
+                                    <button type="button" class="btn btn-outline-secondary">7F</button>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-5 text-right">
+                                    <button type="button" class="btn btn-outline-secondary">8A</button>
+                                    <button type="button" class="btn btn-outline-secondary">8B</button>
+                                    <button type="button" class="btn btn-outline-secondary">8C</button>
+                                </div>
+                                <div class="col-2 text-center">
+                                </div>
+                                <div class="col-5 text-left">
+                                    <button type="button" class="btn btn-outline-secondary">8D</button>
+                                    <button type="button" class="btn btn-outline-secondary">8E</button>
+                                    <button type="button" class="btn btn-outline-secondary">8F</button>
+                                </div>
+                            </div>
+                            <div class="row mb-2">
+                                <div class="col-5 text-right">
+                                    <button type="button" class="btn btn-outline-secondary">9A</button>
+                                    <button type="button" class="btn btn-outline-secondary">9B</button>
+                                    <button type="button" class="btn btn-outline-secondary">9C</button>
+                                </div>
+                                <div class="col-2 text-center">
+                                </div>
+                                <div class="col-5 text-left">
+                                    <button type="button" class="btn btn-outline-secondary">9D</button>
+                                    <button type="button" class="btn btn-outline-secondary">9E</button>
+                                    <button type="button" class="btn btn-outline-secondary">9F</button>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100 mt-4">Book Flight</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- modals -->
+        <div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="basicModalLabel">TITLE</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                BODY
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="/jquery.min.js"></script>
+        <script src="/umd/popper.min.js"></script>
+        <script src="/js/bootstrap.min.js"></script>
+        <script src="/js/parallax.min.js"></script>
+        <script>
+            // window goes down, navbar gets darker
+            $(document).scroll(function() {
+                $("#topNav").toggleClass( "bg-tl navbar-dark", $(document).scrollTop() >= ( $(window).height() * (1/3) ) );
+            });
+
+            // button clicks for seat
+            $("#seatContainer button").click(function(){
+                // prevent user from clicking on disabled one
+                if( $(this).hasClass('disabled') ) return;
+                // remove btn seat secondary from previous ones
+                $("#seatContainer button.btn-secondary").each(function(){
+                    $(this).removeClass("btn-secondary").addClass("btn-outline-secondary");
+                });
+                // set this button to be the active one
+                $(this).removeClass("btn-outline-secondary").addClass("btn-secondary");
+            });
+            
+            // form submit
+            $("#bookForm").submit(function(e){
+                // stop page from refreshing
+                e.preventDefault();
+                // gather data
+                let userInfo = {};
+                userInfo.firstName = $("input[name='fname']").val();
+                userInfo.middleName = $("input[name='mname']").val();
+                userInfo.lastName = $("input[name='lname']").val();
+                userInfo.seat = $("#seatContainer button.btn-secondary").text();
+                console.log(userInfo);
+                // send the request
+                $.ajax('/post/book_seat', {
+                    'method': 'POST',
+                    'data': userInfo
+                }).done(function(data){
+                    if( data.success ) {
+                        // good job
+                        $("#basicModal .modal-title").text("CONGRATULATIONS");
+                        $("#basicModal .modal-body").text("Congratulations! You have successfully purchased a plane ticket!");
+                        $("#basicModal").modal();
+                        $("#basicModal").on('hidden.bs.modal', function(e){
+                            location.reload();
+                        });
+                    } else {
+                        $("#basicModal .modal-title").text("ERROR");
+                        $("#basicModal .modal-body").text(data.error);
+                        $("#basicModal").modal();
+                    }
+                });
+            });
+
+            // check seats taken
+            $.ajax("/post/get_taken_seats", {method: 'POST'}).done(function(data){
+                for( key in data ) {
+                    $(`#seatContainer button:contains('${key}')`).addClass("disabled").tooltip({
+                        title: `This seat is taken by ${data[key]}.`
+                    });
+                }
+            });
+
+        </script>
+    </body>
+</html>
